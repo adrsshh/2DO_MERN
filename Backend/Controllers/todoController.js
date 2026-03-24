@@ -1,4 +1,4 @@
-const Todo = require("../Models/Todo");
+const Todo = require("../Models/ToDo");
 const mongoose = require("mongoose");
 
 // Create Todo

@@ -1,0 +1,8 @@
+{
+  "name": "2do-mern",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install --prefix Backend",
+    "start": "node Backend/Server.js"
+  }
+}
