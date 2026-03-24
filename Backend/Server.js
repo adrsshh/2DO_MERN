@@ -2,7 +2,7 @@ const path = require("path");
 const express = require('express');
 const app = express();
 const cors = require("cors");
-const dotenv = require("dotenv");
+require("dotenv").config();
 const connectDB = require("./Config/db");
 const todoRoutes = require("./Routes/todoRoutes");
 const authRoutes = require("./Routes/authRoutes");
