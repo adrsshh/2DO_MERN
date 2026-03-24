@@ -1,0 +1,9 @@
+{
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.experimental.configFile": "Frontend/src/index.css",
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}
