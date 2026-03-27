@@ -10,7 +10,7 @@ const authRoutes = require("./Routes/authRoutes");
 dotenv.config({ path: path.join(__dirname, ".env") });
 
 const allowedOrigins = (
-    process.env.CORS_ORIGINS || "http://localhost:5173"
+    "https://twodo-mern.onrender.com" || "http://localhost:5173"
 )
     .split(",")
     .map((origin) => origin.trim())
