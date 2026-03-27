@@ -10,7 +10,7 @@ const authRoutes = require("./Routes/authRoutes");
 dotenv.config({ path: path.join(__dirname, ".env") });
 
 const allowedOrigins = (
-    "https://twodo-mern.onrender.com" || "http://localhost:5173"
+    process.env.CLIENT_URLS || process.env.CLIENT_URL || "http://localhost:5173"
 )
     .split(",")
     .map((origin) => origin.trim())
@@ -19,12 +19,12 @@ const allowedOrigins = (
 app.use(
     cors({
         origin: (origin, callback) => {
-            if (!origin || allowedOrigins.includes(origin)) {
+            if (!origin || allowedOrigins.length === 0 || allowedOrigins.includes(origin)) {
                 return callback(null, true);
             }
 
             return callback(new Error("Not allowed by CORS"));
-        }
+        },
     })
 );
 app.use(express.json());
