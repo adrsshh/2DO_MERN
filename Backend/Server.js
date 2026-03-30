@@ -9,8 +9,16 @@ const authRoutes = require("./Routes/authRoutes");
 
 dotenv.config({ path: path.join(__dirname, ".env") });
 
+const defaultAllowedOrigins = [
+    "http://localhost:5173",
+    "https://2dobyjeet.netlify.app",
+];
+
 const allowedOrigins = (
-    process.env.CLIENT_URLS || process.env.CLIENT_URL || "http://localhost:5173"
+    process.env.CORS_ORIGINS ||
+    process.env.CLIENT_URLS ||
+    process.env.CLIENT_URL ||
+    defaultAllowedOrigins.join(",")
 )
     .split(",")
     .map((origin) => origin.trim())
