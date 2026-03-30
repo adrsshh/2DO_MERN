@@ -2,8 +2,8 @@ import axios from "axios";
 
 const configuredBaseURL = import.meta.env.VITE_API_BASE_URL?.trim();
 const defaultBaseURL = import.meta.env.PROD
-  ? "https://twodo-mern.onrender.com/api"
-  : "http://localhost:5000/api";
+  ? "https://twodo-mern.onrender.com"
+  : "http://localhost:5000";
 const normalizedBaseURL = (configuredBaseURL || defaultBaseURL).replace(/\/+$/, "");
 
 const baseURL = normalizedBaseURL.endsWith("/api")
